@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+ 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>Leaflet map</title>
+</head>
+<body>
+	<!--HEAD-->
+	<!--barre de navigation-->
+	<nav class="col nav navbar-expand-lg bg-white navbar-light sticky-top" >
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+      	<span class="navbar-toggler-icon"></span>
+   		</button>
+   		   		<a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo" class="logo brand"></a>
+
+   		<div id="navbarContent" class="collapse navbar-collapse justify-content-center">
+      <!--Liens-->
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href=""><span class="normal">Au</span><br/>quotidien</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><span class="normal">Démarches</span><br/>& téléservices</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><span class="normal">Sorties</span><br/>& découvertes</a>
+            </li>
+             <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo" class="logo logo2"/></a>
+            <li class="nav-item">
+              <a class="nav-link" href=""><span class="normal">La</span><br/>municipalité</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><span class="normal">Participation</span><br/>citoyenne</a>
+            </li>
+            <li class = "nav-item allo">
+              <a class="nav-link" href="">Allo Narbonne<br/><span class="normal">0800 15 13 11</span></a>
+            </li>
+          </ul>
+    </nav>
+    <!--MAIN-->
+    <main>
+    	    <!--image de la cathédrale-->
+<!--pseudo CAROUSEL-->
+<div id="carouselControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <!--section première image-->
+    <div class="carousel-item active">
+      <img src="assets/img/cathedrale.png" class="d-block w-100" alt="First slide"/>
+      <div class="carousel-caption d-none d-lg-block zonetextcarousel">
+        <span class="coeur">Au cœur des possibles <br/> <hr/></span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+	<div class="row flex-container">
+		<div class="col-12 col-lg-3 image-center">
+			<img src="assets/img/moi1.jpg" alt="moi" class="pp"/>
+			<p class ="clarisse">Megan, 24 ans</p>
+		</div>
+		<div class="col-12 col-lg-9 bg">
+			<p class ="titre">Pourquoi peut-on m'apprecier ?</p>
+			<p> Salut moi c'est Megan ,j'ai 24 ans originaire du SUD de la France, je suis un pur produit du sud. <br>
+			Dans la vie j'aime manger et surtout manger puis remanger. Les kinders et les mojitos une grande passion (et je ne parle pas des enfants bien sûr). <br>
+			En soirée on m'apelle généralement Vomito. Mon deuxième surnom la Super canadienne référence à Robin Scherbatsky (petit ref How I Met Your Mother, je t'ordonne de regarder de suite si tu connais pas). Mon talent, je sais faire du bruit avec mon nez.
+		<br> Niveau lieux favoris , j'apprecis beaucoup le <span class="bold">Mc Donald</span> pour ça gastro d'exeption. Mais aussi <span class="bold">l'Espace Liberté </span>, en s'exerçant au bowling tout en digérant le Mc do d'avant. Lors de mauvais temps, et qu'on doit attendre son bus je conseille d'aller ce rechauffer à la <span class="bold"> Médiathèque</span>, pas besoin de payer un café pour aller se réchauffer. <br>
+	 	En cette période de COVID, <span class="bold">l'Hôpital </span> est un endroit agréable à découvrir si vous êtes en manque de maladie. Pour finir, il devrait me faire une carte de fidélité tellement qu'il me voit, je parle bien sur du <span class="bold">Café Etienne</span>. </p>
+		</div>
+	</div>
+
+</div>
+
+	<!--Alerte au covid-->
+	<div class="container">
+		<div class="row alerte">
+			<div class="col-12 col-md-3 alertesquare"><span class="bold"><img src="assets/img/decor/alerte.png" alt="icon"></span></div>
+			<div class="col-12 col-md-9"><p class="paracovid"><span class="bold">[COUVRE-FEU]</span> - À partir du 15 décembre, instauration du couvre-feu de 20h à 6h avec maintien du principe de l’attestation dérogatoire, essentiellement réservée aux professionnels et aux cas d’urgence (soins médicaux, motif familial impérieux…). <br/>
+			Les sorties pour les besoins des animaux seront limitées à 1km et 1h, et les activités physiques et sportive ne seront pas permises. Les commerces devront fermer impérativement à 20h. le retrait de commande et la vente à emporter seront possibles jusqu’à 20h seulement, au-delà la livraison à domicile restera autorisée.</p></div>
+		</div>
+	</div>
+    	<!--En un clic-->
+    <img src="assets/img/decor/deco2.png" alt="artifice" width="100%" height="auto"/>
+    <h1><span class="normal">En un</span> clic</h1>
+    <div class="row mx-3">
+      <div class="col-6 col-md-4 col-lg-4 col-xl-2">
+      	<a href="">
+	        <div class="card gamme">
+	          <img src="assets/img/img1/img1.png" alt="icon" class="card-img-top imageicone">
+	          <div class="card-body">
+	            <h2 class="card-title">Espace citoyen</h2>
+	          </div>
+	        </div>
+    	</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-4 col-xl-2">
+      	<a href="">
+	        <div class="card gamme">
+	          <img src="assets/img/img1/img2.png" alt="icon" class="card-img-top imageicone">
+	          <div class="card-body">
+	            <h2 class="card-title">Etat civil</h2>
+	          </div>
+	        </div>
+	      </div>
+	  </a>
+      <div class="col-6 col-md-4 col-lg-4 col-xl-2">
+      	<a href="">
+	        <div class="card gamme">
+	          <img src="assets/img/img1/img3.png" alt="icon" class="card-img-top imageicone">
+	          <div class="card-body">
+	            <h2 class="card-title">Carte d'identité & transport</h2>
+	          </div>
+	        </div>
+	      </div>
+	  </a>
+      <div class="col-6 col-md-4 col-lg-4 col-xl-2">
+      	<a href="">
+	        <div class="card gamme">
+	          <img src="assets/img/img1/img4.png" alt="icon" class="card-img-top imageicone">
+	          <div class="card-body">
+	            <h2 class="card-title">Billetterie</h2>
+	          </div>
+	        </div>
+	    </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-4 col-xl-2">
+      	<a href="">
+	        <div class="card gamme">
+	          <img src="assets/img/img1/img5.png" alt="icon" class="card-img-top imageicone">
+	          <div class="card-body">
+	            <h2 class="card-title">Nouvel arrivant</h2>
+	          </div>
+	        </div>
+	    </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-4 col-xl-2">
+      	<a href="">
+        <div class="card gamme">
+          <img src="assets/img/img1/img6.png" alt="icon" class="card-img-top imageicone">
+          <div class="card-body">
+            <h2 class="card-title">Permis & autorisations d'urbanisme</h2>
+          </div>
+        </div>
+   	    </a>
+      </div>
+    </div>
+
+<!--parties du site-->
+    <!--METEO-->
+<div class="gris">
+    <img src="assets/img/decor/deco4.png" alt="artifice" width="100%" height="auto"/>
+    <h1><span class="normal">Météo du</span> jour</h1>
+    <div class="col-12 col-sm-12 d-flex justify-content-center my-3 box-meteo">
+    	<div class="box-container">
+				<div id="descriptionMeteo" class="box2"></div>
+		</div>
+	</div>
+		<div class="col-12 col-sm-12 d-flex justify-content-center my-3 box-meteo-case">
+			<div class="box-container">
+				<div id="city"class="box"></div>
+				<div id="temp" class="box"></div>
+				<div id="humidity" class="box"></div>
+				<div id="wind" class="box"></div>
+			</div>
+		</div>
+</div>
+    <!--MAP-->
+    <img src="assets/img/decor/deco3.png" alt="artifice" width="100%" height="auto"/>
+    <h1><span class="normal">Lieux</span> favoris</h1>
+    <div class="container">
+
+    	<div class="row justify-content-center">
+			<div id='mapid'></div>
+		</div>
+	</div>
+</main>
+	<!--FOOTER-->
+<footer>
+		<div class="row rowF">
+			<div class="col-12 col-lg-3 contact">
+				<img src="assets/img/decor/icon.png" alt="icon" class="icon"/>
+				<p class="restonsencontact"><span class="normal">RESTONS</span><br/>EN CONTACT</p></div>
+			<div class="col-12 col-lg-9 liensfooter">
+				<a href="">NEWSLETTER</a>
+				<a href="">SMS FLASH</a>
+				<a href="">TWITTER</a>
+				<a href="">FACEBOOK</a>
+				<a href="">INSTAGRAM</a>
+			</div>
+		</div>
+		<div class="row rowM">
+			<div class="col-12">
+				<a href="">Espace presse</a>
+				<a href="">Espace professionnel</a>
+				<a href="">Espace associations</a>
+				<a href="">Mentions légales</a>
+				<a href="">Plan du site</a>
+			</div>
+		</div>
+</footer>
+	<!--Scripts-->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="assets/js/script.js"></script>
+	<script src="assets/js/meteo.js"></script>
+</body>
+</html>

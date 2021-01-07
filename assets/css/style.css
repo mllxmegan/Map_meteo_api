@@ -1,0 +1,478 @@
+body{
+	font-family: Ubuntu, sans-serif;
+}
+
+hr{
+	border: 2px solid white;
+	width: 200px
+}
+
+/*BARRE DE NAVIGATION*/
+.nav{
+	box-shadow: 0 0 2px 2px rgba(119, 119, 119, 0.2);
+}
+
+.nav ul{
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 1.3em;
+}
+
+li.allo{
+	text-transform: none;
+}
+
+.nav li{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+span.normal{
+	font-weight: normal;
+}
+
+.nav a{
+	color: black !important;
+}
+
+.nav a:hover{
+	color: #0077be !important;
+}
+
+.nav .allo a{ /*section appel*/
+	text-align: center;
+	background-color: #339966;
+	color: white !important;
+}
+
+.nav .allo a:hover{
+	text-decoration: underline !important;
+}
+
+button.navbar-toggler{
+	margin: 10px;
+}
+
+.brand{ /*logo affiché pour le tel*/
+	display: none;
+}
+
+.logo{ /*logo à afficher pour large screens*/
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 250px;
+	height: auto;
+}
+
+/*MAIN*/
+/*au coeur des possibles*/
+/*section carousel*/
+.carousel{
+	margin-bottom: 10px;
+}
+.zonetextcarousel{
+	margin-bottom: 12%;
+	letter-spacing: 0.2em;
+	word-spacing: 0.1em;
+}
+
+.coeur{ /*texte - au coeur des possibles*/
+ text-align: center;
+ font-size: 4em;
+ font-weight: bold;
+ color: white;
+ text-shadow: 2px 2px 2px #151414;
+}
+
+/*alerte info*/
+.alerte{ /*toute la row*/
+	border: 2px solid #ee2e24;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
+	word-spacing: 3px;
+}
+
+.alertesquare{ /*section gauche*/
+	background-color: #ee2e24;
+	text-align: center;
+}
+
+.paracovid{ /*paragraphe alerte covid*/
+	padding: 20px;
+	font-size: 1.4em;
+}
+
+.bold{ /*mots importants*/
+	font-weight: bold;
+}
+
+/*catégories principales de la page*/
+.container{
+	margin-top: 50px;
+}
+
+.card{
+	align-items: center;
+	border: none;
+}
+
+a{
+	color: black !important;
+}
+
+a:hover{
+	color: #333337 !important;
+}
+
+h1{ /*titre des catégories*/
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	font-size: 3em;
+	letter-spacing: 3px;
+	word-spacing: 5px;
+}
+
+h2{
+	font-size: 1.5em;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+/*en un clic*/
+
+.imageicone{
+	height: 200px;
+	width: 200px;
+	text-align: center;
+}
+
+/* METEO */
+.box-container
+{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box
+{
+  width: 25%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.box2{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.3em;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: #f7f7f7;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.box-meteo{
+	margin-bottom: 0 !important;
+}
+
+.box-meteo-case{
+	padding: 0 !important;
+}
+
+#descriptionMeteo img{
+	height: 60px;
+	width: 60px;
+}
+
+.gris{
+	background-color: #161616;
+	padding-bottom: 0;
+	padding-top: 10px;
+	color: white;
+}
+
+#city
+{
+  background-color: #22739F;
+}
+#temp
+{
+  background-color: #244D76;
+}
+#humidity
+{
+  background-color: #7F5D9C;
+}
+#wind
+{
+  background-color: #5D9C7D;
+}
+
+/*Presentation*/
+
+
+.pp{
+	height: 220px;
+	width: 220px;
+	border-radius: 20px;
+}
+
+.titre{
+	font-size: 2em;
+}
+
+.clarisse:last-child{
+	font-size: 1.5em;
+	margin-top: 10px;
+	color: #3A3C3D;
+}
+
+.flex-container{
+	background-color: #D8D8D8;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	text-align: justify;
+	margin-bottom: 50px;
+}
+
+.image-center{
+	text-align: center;
+	padding: 30px;
+}
+
+.bg{
+	padding: 30px;
+	background-color: #f0f0f0;
+}
+
+/*MAP LEAFLET*/
+
+.map{
+	align-items: center;
+	align-content: center;
+	text-align: center;
+}
+
+#mapid {
+	width: 900px;
+	height: 500px;
+}
+
+/*FOOTER*/
+footer{
+	width: 100%;
+	font-size: 1.5em;
+	margin-top: 100px;
+}
+
+.rowF, .rowM{ /*mes deux div de la première ligne du footer*/
+	margin: 0 !important;
+}
+
+.icon{
+	float: left;
+	margin-right: 20px;
+	margin-left: 50px;
+}
+
+.contact + .liensfooter{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.contact{ /*section contact*/
+	padding-top: 50px;
+	color: white;
+	background-color: #2f2f2f;
+}
+
+.restonsencontact{ /*texte restons en contact*/
+	margin-top: -12px;
+	font-weight: bold;
+}
+
+.liensfooter{
+	background-color: #282828;
+}
+
+
+footer a{
+	color: lightgrey !important;
+	padding-left: 40px;
+	padding-right: 40px;
+	font-weight: bold;
+}
+
+footer a:hover{
+	color: white !important;
+	text-decoration: none;
+}
+
+.rowM{ /*section du bas avec copyright*/
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #101011;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+.rowM a{
+	font-weight: normal;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/*responsive*/
+@media (max-width: 1600px){
+	.imageicone{
+		height: 150px;
+		width: 150px;
+	}
+}
+
+@media (max-width: 1450px){
+	.nav ul{
+		font-size: 1em;
+	}
+
+	.coeur{
+		font-size: 4em;
+	}
+
+	.logo{
+		width: 200px;
+	}
+
+	.paracovid{ /*paragraphe alerte covid*/
+	font-size: 1em;
+	}
+
+	h1{
+		font-size: 2em;
+	}
+
+	h2{
+		font-size: 0.8em;
+	}
+	footer{
+		font-size: 1em;
+	}
+
+}
+
+@media (max-width: 1240px){
+	.nav ul{
+		font-size: 0.8em;
+	}
+
+	.coeur{
+		font-size: 2.5em;
+	}
+
+	.pp{
+	height: 170px;
+	width: 170px;
+	}
+}
+
+@media (max-width: 1055px){
+	.nav ul{
+		font-size: 0.7em;
+	}
+
+	.box{
+		width: 50%;
+		height: 200px;
+	}
+}
+
+@media (max-width: 991px){
+	.nav{
+		text-align: center;
+		padding: 0 !important;
+	}
+
+	.nav ul{
+		background-color: #f7f7f7;
+	}
+
+	.brand{
+		display: inline-block;
+	}
+
+	.logo2{
+		display: none;
+	}
+}
+
+@media (max-width: 885px){
+	.coeur{
+		font-size: 2.5em;
+	}
+}
+
+@media (max-width: 700px){
+	.coeur{
+		font-size: 2em;
+	}
+}
+
+@media (max-width: 500px){
+	.coeur{
+		font-size: 1.5em;
+	}
+}
+
+@media (max-width: 450px){
+	.box{
+		width: 100%;
+		height: 100px;
+	}
+}
+
+@media (max-width: 420px){
+	.card-img-top{
+	height: 120px;
+	width: 120px;
+	}
+}
+
+@media (max-width: 400px){
+	.coeur{
+		font-size: 1em;
+	}
+
+	.brand{
+		width: 140px;
+		height: auto;
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 300px){
+	.card-img-top{
+	height: 100px;
+	width: 100px;
+	}
+}
